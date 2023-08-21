@@ -1,4 +1,5 @@
 #include "binary_trees.h"
+#include "14-binary_tree_balance.c"
 /**
  * binary_tree_is_full - checks if binary tree is full
  *
@@ -7,5 +8,11 @@
  */
 int binary_tree_is_full(const binary_tree_t *tree)
 {
-	(void)tree;
+	if (tree == NULL)
+		return (0);
+	if (binary_tree_balance(tree) == 0)
+		return (1);
+	return (0);
+
+
 }
