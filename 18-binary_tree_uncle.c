@@ -14,6 +14,6 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 		return (NULL);
 
 	if (parent)
-		return (binary_tree_uncle(parent));
+		return (binary_tree_sibling(parent));
 	return (NULL);
 }
