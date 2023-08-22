@@ -39,7 +39,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	size = binary_tree_size(tree);
 	exp = height - 1;
 
-	if (size == _pow(2, exp))
+	if (((size + 1) / 2) == _pow(2, exp)) /*if highest row is full*/
 		return (1);
 	return (0);
 }
